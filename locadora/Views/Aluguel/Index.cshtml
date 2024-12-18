@@ -1,0 +1,71 @@
+﻿@{
+    ViewData["Title"] = "Cliente";
+}
+
+<div class="text-center">
+    <h1 class="display-4">LocaMais Locadora</h1>
+    <h5 style="margin-top: 20px">Lista de Alugueis</h5>
+</div>
+
+
+<div>
+
+    <button type="button" class="btn btn-secondary">+ Novo Aluguel</button>
+    <table class="table">
+
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Cliente</th>
+                <th scope="col">Veiculo</th>
+                <th scope="col">Placa</th>
+                <th scope="col">Retirada</th>
+                <th scope="col">Devolução</th>
+                <th scope="col">Total de diárias</th>
+                <th scope="col">Pagamento</th>
+                <th style="text-align: center" scope="col">Fechar aluguel</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark de Jesus</td>
+                <td>Polo</td>
+                <td>E0CB457</td>
+                <td>08/12/2024</td>
+                <td></td>
+                <td></td>
+                <td>Em aberto</td>
+                <td style="text-align: center">
+                    <button type="button" class="btn btn-warning">Finalizar</button>
+                </td>
+            </tr>
+
+            <tr>
+                <th scope="row">1</th>
+                <td>Jacob Santos</td>
+                <td>Onix</td>
+                <td>A0CB454</td>
+                <td>05/12/2024</td>
+                <td>08/12/2024</td>
+                <td>2 diárias</td>
+                <td>Pago</td>
+                <td style="text-align: center">
+                    <button type="button" class="btn btn-warning">Finalizar</button>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+
+<div>
+
+    <button action="" type="button" class="btn btn-secondary" onclick="history.back()">Voltar</button>
+
+</div>
+
+
+
+

@@ -1,0 +1,53 @@
+﻿@using LocaMais.Models
+@model Cliente
+@{
+    ViewData["Title"] = "Cliente";
+}
+
+@if (TempData["MensagemErro"] != null)
+{
+    <div class="alert alert-danger">
+        @TempData["MensagemErro"]
+    </div>
+}
+
+
+<div class="text-center" style="margin-bottom: 50px">
+    <h3 class="display-4">Cadastro de cliente</h3>
+</div>
+
+<form id="clienteForm" asp-controller="Cliente" asp-action="Cadastro" method="post" class="row g-3">
+    <div class="col-md-4">
+        <label for="Nome" class="form-label">Nome</label>
+        <input type="text" asp-for="Nome" class="form-control" id="Nome" />
+    </div>
+
+    <div class="col-md-3">
+        <label for="Cpf" class="form-label">CPF</label>
+        <input type="number" asp-for="Cpf" class="form-control" id="Cpf" />
+    </div>
+
+    <div class="col-md-2">
+        <label for="Fone" class="form-label">Telefone</label>
+        <input type="number" asp-for="Telefone" class="form-control" id="Fone" />
+    </div>
+
+    <div class="col-md-3">
+        <label for="Email" class="form-label">Email</label>
+        <input type="text" asp-for="Email" class="form-control" id="Email" />
+    </div>
+
+    <div style="margin-top: 20px">
+        <button type="submit" class="btn btn-primary" onclick="return validarForm()">Gravar</button>
+            <a asp-controller="Cliente" asp-action="Index">
+                <button type="button" class="btn btn-secondary">Voltar</button>
+            </a>
+    </div>
+</form>
+
+
+
+
+
+
+

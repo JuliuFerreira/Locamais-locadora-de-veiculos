@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">LocaMais Locadora</h1>
+    <h5 style="margin-top: 20px">Seja bem vindo ao sistema de locadora de veiculos LocaMais</h5>
+</div>
+
+
+    <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 50px">
+        <div class="card" style="width: 20rem;">
+            <img src="~/clientes.png" class="card-img-top" alt="">
+            <div class="card-body">
+                <h5 class="card-title"></h5>
+                <p class="card-text">Aqui você faz o cadastro dos clientes na sua base de dados.</p>
+                <a asp-controller="Cliente" asp-action="Index" class="btn btn-primary">Clientes</a>
+            </div>
+        </div>
+
+    <div class="card" style="width: 20rem;">
+        <img src="~/venda.png" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title"></h5>
+            <p class="card-text">Cadastro do aluguel de veiculos da empresa.</p>
+            <a asp-controller="Aluguel" asp-action="Index" class="btn btn-primary">Aluguel</a>
+        </div>
+    </div>
+
+        <div class="card" style="width: 20rem;">
+            <img src="~/Carros.png" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"></h5>
+                <p class="card-text">Cadastre aqui os veiculos do estoque da empresa.</p>
+            <a asp-controller="Veiculo" asp-action="Index" class="btn btn-primary">Veiculo</a>
+        </div>
+        </div>
+
+        
+    </div>
+
+
+
+

@@ -1,0 +1,87 @@
+﻿@using LocaMais.Models
+@model IEnumerable<Cliente>
+
+
+@{
+    ViewData["Title"] = "Cliente";
+}
+
+@if (TempData["MensagemSucesso"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["MensagemSucesso"]
+    </div>
+}
+@if (TempData["MensagemErro"] != null)
+{
+    <div class="alert alert-danger">
+        @TempData["MensagemSucesso"]
+    </div>
+}
+
+<div class="text-center" style="margin-bottom: 50px">
+    <h3 class="display-4">Lista de clientes</h3>
+</div>
+
+
+<div>
+    <button type="button" class="btn btn-secondary">
+        <a asp-controller="Cliente" asp-action="Cadastro" class="no-visited">
+            + Novo Cliente
+        </a>
+    </button>
+    <table class="table">
+
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Cpf</th>
+                <th scope="col">Telefone</th>
+                <th scope="col">Email</th>
+                <th scope="col">Editar</th>
+                <th scope="col">Remover</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            
+            @foreach (var user in Model)
+            {
+                <tr style="font-size: 16px; border-color: black;">
+                    <td>@user.Id</td>
+                    <td>@user.Nome</td>
+                    <td>@user.Cpf</td>
+                    <td>@user.Telefone</td>
+                    <td>@user.Email</td>
+                    <td>
+                        <a role="button" asp-route-id="@user.Id" asp-controller="Cliente" asp-action="Editar">
+                            <button class="btn-outline-warning">
+                                Editar
+                            </button>                            
+                        </a>
+                    </td>
+                    <td>                        
+                        <button class="bg-danger">
+                            Excluir
+                        </button>                        
+                    </td>
+                </tr>
+
+            }
+
+        </tbody>
+    </table>
+</div>
+
+
+<div>
+    <a asp-controller="Home" asp-action="Index">
+        <button type="button" class="btn btn-secondary">Voltar</button>
+    </a>
+
+</div>
+
+
+
+
